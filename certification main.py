@@ -5,11 +5,11 @@ df = pd.read_csv('na.csv')
 # font = ImageFont.truetype('PTF75F.ttf',95)
 
 for index,j in df.iterrows():
-    img = Image.open('game.png')
+    img = Image.open('platinum_mockup/platinum_certificate.jpg')
 
-    font = ImageFont.truetype('Lato-Bold.ttf',100)
+    font = ImageFont.truetype('platinum_mockup/certificate_name_font.ttf', 143)
     draw = ImageDraw.Draw(img)
-    draw.text(xy=(1000,680),text='{}'.format(j['name']),fill=('black'),font=font, anchor="ms")
+    draw.text(xy=(923,655),text='{}'.format(j['name']),fill=('#F2D770'),font=font, anchor="ms")
 
     # font2 = ImageFont.truetype('Montserrat-Medium.ttf',100)
     # draw = ImageDraw.Draw(img)
