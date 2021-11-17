@@ -22,6 +22,24 @@ for index,j in df.iterrows():
 
 
 
+for index,j in df.iterrows():
+    img = Image.open('platinum_mockup/card mockup-01.jpg')
+
+    font = ImageFont.truetype('platinum_mockup/Poppins-Bold.ttf', 125)
+    draw = ImageDraw.Draw(img)
+    draw.text(xy=(2625,765),text='{}'.format(j['name']),fill=('#080D44'),font=font, stroke_width=1, anchor="rs")
+
+    font2 = ImageFont.truetype('platinum_mockup/Poppins-Regular.ttf',67)
+    draw = ImageDraw.Draw(img)
+    draw.text(xy=(1790,1390),text='{}'.format(j['id']),fill=('black'),font=font2, anchor="ls")
+
+    img.save('m_card/{}.png'.format(j['name']))
+
+
+
+
+
+
 
 # CULTURAL CLUB
 # from PIL import Image, ImageDraw, ImageFont
